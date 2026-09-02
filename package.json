@@ -1,0 +1,37 @@
+{
+  "name": "sentence-capitalizer",
+  "version": "1.0.0",
+  "description": "Obsidian plugin that auto-capitalizes the first letter of a sentence as you type",
+  "main": "main.js",
+  "scripts": {
+    "dev": "node esbuild.config.mjs",
+    "build": "node esbuild.config.mjs production",
+    "lint": "eslint .",
+    "test": "vitest run"
+  },
+  "keywords": [
+    "obsidian",
+    "plugin",
+    "autocorrect",
+    "capitalize"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@codemirror/commands": "^6.0.0",
+    "@codemirror/lang-markdown": "^6.5.2",
+    "@codemirror/language": "^6.0.0",
+    "@codemirror/state": "^6.7.2",
+    "@codemirror/view": "^6.27.0",
+    "@types/node": "^20.0.0",
+    "esbuild": "0.17.3",
+    "eslint": "^9.0.0",
+    "eslint-plugin-obsidianmd": "latest",
+    "globals": "latest",
+    "jsdom": "^25.0.1",
+    "obsidian": "latest",
+    "typescript": "^5.0.0",
+    "typescript-eslint": "latest",
+    "vitest": "^2.1.9"
+  }
+}
