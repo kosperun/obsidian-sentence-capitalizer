@@ -2,6 +2,10 @@
 
 A tiny Obsidian plugin that fixes one specific annoyance: forgetting Shift when starting a new sentence.
 
+I tried a couple of existing autocorrect plugins first, but each rescanned the whole line on every keystroke thus fighting
+you by re-capitalizing letters you'd deliberately typed lowercase, undo didn't cleanly revert just the auto-capitalization, and also
+did much more than this one specific fix, so this plugin exists to do exactly this one thing correctly.
+
 When you finish typing a word — by pressing space, a punctuation mark, or Enter — its first letter is capitalized if
 that word starts a sentence. This mirrors Word/LibreOffice: nothing happens while you're still composing the word,
 so you're always free to type a deliberate lowercase letter there, correction only happens once, on the word-ending keystroke.
