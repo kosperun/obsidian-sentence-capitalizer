@@ -3,7 +3,7 @@
     "name": "Sentence Capitalizer",
     "version": "1.0.0",
     "minAppVersion": "0.15.0",
-    "description": "Auto-capitalizes the first letter you type at the start of a sentence, list item, blockquote, or note — undoes cleanly with Cmd/Ctrl+Z.",
+    "description": "Auto-capitalizes the first letter you type at the start of a sentence,  undoes cleanly with Cmd/Ctrl+Z.",
     "author": "Kostiantyn Perun",
     "authorUrl": "https://github.com/kosperun",
     "isDesktopOnly": false
