@@ -26,9 +26,9 @@ Code blocks and inline code spans are never touched, detected via Obsidian's own
 
 ## Project layout
 
-- `src/capitalize.ts` — the actual behavior: the capitalization rules and the CodeMirror `ViewPlugin` that applies them.
+- `src/capitalize.ts`: the actual behavior, the capitalization rules and the CodeMirror `ViewPlugin` that applies them.
  Has no dependency on the `obsidian` package, so it's testable in isolation.
-- `src/main.ts` — the Obsidian `Plugin` subclass: settings storage and the settings tab UI, wiring `capitalize.ts` into the editor.
+- `src/main.ts`: the Obsidian `Plugin` subclass, settings storage and the settings tab UI, wiring `capitalize.ts` into the editor.
 
 ## Install (manual)
 
@@ -38,7 +38,7 @@ npm run build
 ```
 
 (`--legacy-peer-deps` is needed because the `obsidian` types package pins an exact peer version of `@codemirror/state` that's older than what
-`@codemirror/commands` requires — a dev-tooling-only conflict; Obsidian itself supplies one consistent set of CodeMirror packages at runtime.)
+`@codemirror/commands` requires, a dev-tooling-only conflict; Obsidian itself supplies one consistent set of CodeMirror packages at runtime.)
 
 Copy `manifest.json` and `main.js` into `<vault>/.obsidian/plugins/sentence-capitalizer/`, then enable the plugin in Obsidian's Community Plugins settings.
 
@@ -48,5 +48,5 @@ Copy `manifest.json` and `main.js` into `<vault>/.obsidian/plugins/sentence-capi
 npm run test
 ```
 
-Runs against a real CodeMirror `EditorState`/`EditorView` (jsdom), simulating actual keystroke-by-keystroke typing, Enter, and undo/redo — not just the pure
+Runs against a real CodeMirror `EditorState`/`EditorView` (jsdom), simulating actual keystroke-by-keystroke typing, Enter, and undo/redo, not just the pure
 decision logic in isolation, since most of the interesting bugs here were in how transactions and history interact.
